@@ -33,8 +33,8 @@ else # travis run
 	convert -density 300 ${MAKE_DIR}/$(notdir $@) -quality 90 $(@:.pdf=.png)
 
 endif
-# $@ is the name of the target being generated
-cp ${MAKE_DIR}/$(notdir $@) .
+	# $@ is the name of the target being generated
+	cp ${MAKE_DIR}/$(notdir $@) .
 
 
 # create the MAKE_DIR folder
