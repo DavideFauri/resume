@@ -27,7 +27,7 @@
 
 ## Preview
 
-My résumé is here: [PDF](https://example.com)
+My résumé is available in two languages: [ENG](https://example.com), [ITA](https://example.com)
 
 |                                  Page. 1                                  |                                  Page. 2                                  |
 |:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
