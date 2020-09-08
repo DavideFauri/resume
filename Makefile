@@ -25,9 +25,9 @@ ifndef TRAVIS # local run
 else # travis run
 	tectonic -o $(MAKE_DIR) --keep-intermediates -r0 $<
 	if [ -f ${MAKE_DIR}/$(notdir $(<:.tex=.bcf)) ]; then biber --input-directory ${MAKE_DIR} $(notdir $(<:.tex=)); fi
-	# tectonic -o $(MAKE_DIR) --keep-intermediates -r0 $<
+	tectonic -o $(MAKE_DIR) --keep-intermediates -r0 $<
 	# makeindex ${MAKE_DIR}/$(notdir $(<:.tex=.idx))
-	tectonic -o $(MAKE_DIR) --print $<
+	# tectonic -o $(MAKE_DIR) --print $<
 endif
 	# $@ is the name of the target being generated
 	cp ${MAKE_DIR}/$(notdir $@) .
