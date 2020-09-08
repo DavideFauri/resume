@@ -1,5 +1,13 @@
 language: generic
 
+addons:
+  apt:
+    packages:
+      # to read from PDFs
+      - ghostscript
+      # needed for makeindex
+      - texlive-binaries
+
 cache:
   directories:
   - "$HOME/.cache/Tectonic"
@@ -10,9 +18,6 @@ env:
     - MAGICK_CONFIGURE_PATH=$HOME/.config/ImageMagick
 
 before_install:
-  # Install makeindex, if you do not use an index you can remove this (also remove the extra makeindex call).
-  # - sudo apt-get install texlive-binaries
-
   # Edit ImageMagick policy to read PDF and write PNG
   - echo $MAGICK_CONFIGURE_PATH
   - mkdir -p $MAGICK_CONFIGURE_PATH
