@@ -1,13 +1,30 @@
 language: generic
 
+addons:
+  apt:
+    packages:
+      # to read from PDFs
+      - ghostscript
+      # needed for makeindex
+      - texlive-binaries
+
 cache:
   directories:
   - "$HOME/.cache/Tectonic"
   - "$HOME/miniconda"
 
+env:
+  global:
+    - MAGICK_CONFIGURE_PATH=$HOME/.config/ImageMagick
+
 before_install:
-  # Install makeindex, if you do not use an index you can remove this (also remove the extra makeindex call).
-  # - sudo apt-get install texlive-binaries
+  # Edit ImageMagick policy to read PDF and write PNG
+  - echo $MAGICK_CONFIGURE_PATH
+  - mkdir -p $MAGICK_CONFIGURE_PATH
+  - echo '<policymap>' > $MAGICK_CONFIGURE_PATH/policy.xml
+  - echo '<policy domain="coder" rights="read" pattern="PDF" />' >> $MAGICK_CONFIGURE_PATH/policy.xml
+  - echo '</policymap>' >> $MAGICK_CONFIGURE_PATH/policy.xml
+  - sudo rm /etc/ImageMagick-6/policy.xml
 
 install:
   # Needed to check if conda already installed
@@ -28,7 +45,7 @@ install:
   - conda info -a
 
 script:
-- make
+- make resume
 
 
 deploy:
@@ -36,7 +53,9 @@ deploy:
   api_key:
     secure: RoJ10tNqYOk6K7yxiXT4nj8oDocr9fnsWi9cQzqe5/jkCXquR6eT92DXq4vLdmc7uHWOFjwP1iURDs61upqEdbmLki8XMiZ5rXAtxWBF04je+TDUS4eLnc8abf6E/jJj4HX9c84SqVFl9aePyPZinm8QDvxw722vYOqAyeNbsz8MZVVFQvUvzmWwYbD1/iNkZ5v7IrfKdHPFi5TTOARGI1DI/D63pa2TzPsoh2lCSqe+t8IIY2gx7QR4HCCdEeBBqaABwm66La+7PjLl2HNk8c+VSrgParOV67HVZDCYSqokSgykZTausem06+LkYP62JBOxldNYchTluj+1NEctn2Bktk7jfLocl6LfcD3MOqpYa5XPha3WmaLpVOx0G/8cQ+L7JBT7DlqEzuhjntXaJH7g2cB0IYAnP7ofVYHJeNgqlKqyerx7HkpJ2/6W6XJMGbfcbul1dG555jYCtn0nkowYnunzY7PrxCtqJReWIeQDTpKsiFCtoATjk0ylRC9J/cgK+jTka2kYuQhk/NSkmHpodIJh199df9MPsuo2ibjkKBjNtY7SRjpMqDe9HI2JTdfLFAZ6Yg/Lu1GJsrVtdogQLf6ov4JS902mFO0fQpPkK7o5EhE5ZWKhZ8wJP1OQNszPYQx/V/iEVNb3HSXDYDyA/PNMdZEkf+WhskWjFE0=
   file_glob: true
-  file: CV_*.pdf
+  file:
+    - CV_*.pdf
+    - CV_*.png
   skip_cleanup: true
   on:
     tags: true
