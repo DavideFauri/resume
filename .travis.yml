@@ -5,12 +5,21 @@ cache:
   - "$HOME/.cache/Tectonic"
   - "$HOME/miniconda"
 
+env:
+  global:
+    - MAGICK_CONFIGURE_PATH=$HOME/.config/ImageMagick
+
 before_install:
   # Install makeindex, if you do not use an index you can remove this (also remove the extra makeindex call).
   # - sudo apt-get install texlive-binaries
-  # check imagemagick policy
-  - identify -version
-  - identify -list policy | less
+
+  # Edit ImageMagick policy to read PDF and write PNG
+  - echo $MAGICK_CONFIGURE_PATH
+  - mkdir -p $MAGICK_CONFIGURE_PATH
+  - echo '<policymap>' > $MAGICK_CONFIGURE_PATH/policy.xml
+  - echo '<policy domain="coder" rights="read" pattern="PDF" />' >> $MAGICK_CONFIGURE_PATH/policy.xml
+  - echo '</policymap>' >> $MAGICK_CONFIGURE_PATH/policy.xml
+  - sudo rm /etc/ImageMagick-6/policy.xml
 
 install:
   # Needed to check if conda already installed
