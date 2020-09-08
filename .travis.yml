@@ -28,7 +28,7 @@ install:
   - conda info -a
 
 script:
-- make
+- make resume
 
 
 deploy:
