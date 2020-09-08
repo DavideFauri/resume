@@ -35,7 +35,9 @@ else # travis run
 	convert -density 300 ${MAKE_DIR}/$(notdir $@) -quality 90 $(@:.pdf=.png)
 
 	cp ${MAKE_DIR}/$(notdir $@) .
-	cp ${MAKE_DIR}/$(wildcard *.png) .
+	ls ${MAKE_DIR}/*.png
+	ls .
+	# cp ${MAKE_DIR}/$(wildcard *.png) .
 endif
 
 
