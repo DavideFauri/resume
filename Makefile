@@ -23,8 +23,6 @@ resume: $(resume_files:.tex=.pdf)
 ifndef TRAVIS # local run
 	# $< is the name of the source file
 	latexmk ${tex_flags} -outdir=${MAKE_DIR} $<
-	# $@ is the name of the target being generated
-	cp ${MAKE_DIR}/$(notdir $@) .
 
 else # travis run
 	tectonic -o $(MAKE_DIR) --keep-intermediates -r0 $<
@@ -34,12 +32,9 @@ else # travis run
 	# tectonic -o $(MAKE_DIR) --print $<
 	convert -density 300 ${MAKE_DIR}/$(notdir $@) -quality 90 $(@:.pdf=.png)
 
-	cp ${MAKE_DIR}/$(notdir $@) .
-	ls .
-	ls ${MAKE_DIR}/
-	# cp ${MAKE_DIR}/$(wildcard *.png) .
 endif
-
+# $@ is the name of the target being generated
+cp ${MAKE_DIR}/$(notdir $@) .
 
 
 # create the MAKE_DIR folder
@@ -54,8 +49,3 @@ clean:
 	rm -f $(notdir $(all_files:.tex=.synctex.gz))
 	rm -f $(notdir $(all_files:.tex=.run.xml))
 	rm -f $(notdir $(all_files:.tex=.bcf))
-	rm -f $(notdir $(all_files:.tex=.bcf))
-
-
-
-# rm -f $(notdir $(all_files:.tex=.bcf))
