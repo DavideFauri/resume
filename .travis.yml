@@ -56,6 +56,5 @@ deploy:
   file:
     - CV_*.pdf
     - CV_*.png
-  skip_cleanup: true
   on:
     tags: true
