@@ -1,117 +1,65 @@
 <h1 align="center">
-  <a href="https://github.com/posquit0/Awesome-CV" title="AwesomeCV Documentation">
-    <img alt="AwesomeCV" src="https://github.com/posquit0/Awesome-CV/raw/master/icon.png" width="200px" height="200px" />
+  <a href="https://github.com/DavideFauri/resume" title="Résumé Davide Fauri">
+    <img alt="DavideFauri" src="https://github.com/DavideFauri/resume/raw/master/icon.png" width="200px" height="200px" />
   </a>
   <br />
-  Awesome CV
+  Davide Fauri
 </h1>
 
 <p align="center">
-  LaTeX template for your outstanding job application
+  Professional résumé
 </p>
 
 <div align="center">
-  <a href="https://www.paypal.me/posquit0">
-    <img alt="Donate" src="https://img.shields.io/badge/Donate-PayPal-blue.svg" />
+  <a href="https://travis-ci.com/github/DavideFauri/resume">
+    <img alt="TravisCI" src="https://travis-ci.com/DavideFauri/resume.svg?branch=master" />
   </a>
-  <a href="https://circleci.com/gh/posquit0/Awesome-CV">
-    <img alt="CircleCI" src="https://circleci.com/gh/posquit0/Awesome-CV.svg?style=shield" />
+  <a href="https://example.com">
+    <img alt="Résumé (English)" src="https://img.shields.io/badge/resume%20(ENG)-pdf-green.svg" />
   </a>
-  <a href="https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/resume.pdf">
-    <img alt="Example Resume" src="https://img.shields.io/badge/resume-pdf-green.svg" />
-  </a>
-  <a href="https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/cv.pdf">
-    <img alt="Example CV" src="https://img.shields.io/badge/cv-pdf-green.svg" />
-  </a>
-  <a href="https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/coverletter.pdf">
-    <img alt="Example Coverletter" src="https://img.shields.io/badge/coverletter-pdf-green.svg" />
+  <a href="https://example.com">
+    <img alt="Résumé (Italiano)" src="https://img.shields.io/badge/resume%20(ITA)-pdf-green.svg" />
   </a>
 </div>
 
 <br />
 
-## What is Awesome CV?
-
-**Awesome CV** is LaTeX template for a **CV(Curriculum Vitae)**, **Résumé** or **Cover Letter** inspired by [Fancy CV](https://www.sharelatex.com/templates/cv-or-resume/fancy-cv). It is easy to customize your own template, especially since it is really written by a clean, semantic markup.
-
-
-## Donate
-
-Please help keep this project alive! Donations are welcome and will go towards further development of this project.
-
-    PayPal: paypal.me/posquit0
-    BTC: 1Je3DxJVM2a9nTVPNo55SfQwpmxA6N2KKb
-    BCH: 1Mg1wG7PwHGrHYSWS67TsGSjo5GHEVbF16
-    ETH: 0x77ED9B4659F80205E9B9C9FB1E26EDB9904AFCC7
-    QTUM: QZT7D6m3QtTTqp7s4ZWAwLtGDsoHMMaM8E
-
-*Thank you for your support!*
 
 ## Preview
 
-#### Résumé
+My résumé is here: [PDF](https://example.com)
 
-You can see [PDF](https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/resume.pdf)
-
-| Page. 1 | Page. 2 |
-|:---:|:---:|
-| [![Résumé](https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/resume-0.png)](https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/resume.pdf)  | [![Résumé](https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/resume-1.png)](https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/resume.pdf) |
-
-#### Cover Letter
-
-You can see [PDF](https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/coverletter.pdf)
-
-| Without Sections | With Sections |
-|:---:|:---:|
-| [![Cover Letter(Traditional)](https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/coverletter-0.png)](https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/coverletter.pdf)  | [![Cover Letter(Awesome)](https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/coverletter-1.png)](https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/coverletter.pdf) |
-
-
-## Quick Start
-
-* [**Edit Résumé on OverLeaf.com**](https://www.overleaf.com/latex/templates/awesome-cv/tvmzpvdjfqxp)
-* [**Edit Cover Letter on OverLeaf.com**](https://www.overleaf.com/latex/templates/awesome-cv-cover-letter/pfzzjspkthbk)
-
-**_Note:_ Above services do not guarantee up-to-date source code of Awesome CV**
+|                                  Page. 1                                  |                                  Page. 2                                  |
+|:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
+| [![Résumé](https://via.placeholder.com/630x840.png)](https://example.com) | [![Résumé](https://via.placeholder.com/630x840.png)](https://example.com) |
 
 
 ## How to Use
 
-#### Requirements
+### Automatic compilation and publishing through Travis CI
 
-A full TeX distribution is assumed.  [Various distributions for different operating systems (Windows, Mac, \*nix) are available](http://tex.stackexchange.com/q/55437) but TeX Live is recommended.
-You can [install TeX from upstream](http://tex.stackexchange.com/q/1092) (recommended; most up-to-date) or use `sudo apt-get install texlive-full` if you really want that.  (It's generally a few years behind.)
+I've set up a `.travis.yml` configuration file to automatically compile both version of my résumé whenever a commit is made, and to publish them if the committed version has a tag.
+The published PDFs should be accessible from the shields at the top of this README.
 
-#### Usage
+### Local compilation
 
-At a command prompt, run
+For *local* compilation, a full TeX distribution is assumed. There are many distributions available, [TeX Live](tug.org/texlive) is the usual recommendation.
+
+The usage is simple: at a command prompt, just run
 
 ```bash
-$ xelatex {your-cv}.tex
+$ make {your-cv}.pdf
 ```
 
-This should result in the creation of ``{your-cv}.pdf``
+and it should produce the desired output.
+
+In the Makefile, I invoke the `latexmk` command, which is obtainable via the TeX Live package manager (`sudo tlmgr install latexmk`).
+
+Other, more modern approaches could work better: if I had to start from scratch now, I would probably use [Tectonic](https://tectonic-typesetting.github.io).
 
 
 ## Credit
 
-[**LaTeX**](http://www.latex-project.org) is a fantastic typesetting program that a lot of people use these days, especially the math and computer science people in academia.
+[**Awesome-CV**](https://github.com/posquit0/Awesome-CV) is the main project that I forked and took as a template for my resume. Thanks @posquit0, you're great!
 
-[**LaTeX FontAwesome**](https://github.com/furl/latex-fontawesome) is bindings for FontAwesome icons to be used in XeLaTeX.
-
-[**Roboto**](https://github.com/google/roboto) is the default font on Android and ChromeOS, and the recommended font for Google’s visual language, Material Design.
-
-[**Source Sans Pro**](https://github.com/adobe-fonts/source-sans-pro) is a set of OpenType fonts that have been designed to work well in user interface (UI) environments.
-
-
-## Contact
-
-You are free to take my `.tex` file and modify it to create your own resume. Please don't use my resume for anything else without my permission, though!
-
-If you have any questions, feel free to join me at [`#posquit0` on Freenode](irc://irc.freenode.net/posquit0) and ask away. Click [here](https://kiwiirc.com/client/irc.freenode.net/posquit0) to connect.
-
-Good luck!
-
-
-## See Also
-
-* [Awesome Identity](https://github.com/posquit0/hugo-awesome-identity) - A single-page Hugo theme to introduce yourself.
+[**aminmkhan's fork** of Awesome-CV](https://github.com/aminmkhan/Awesome-CV) is a notable fork that provides support for BibTex publications.
