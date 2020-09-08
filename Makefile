@@ -32,7 +32,7 @@ else # travis run
 	tectonic -o $(MAKE_DIR) --keep-intermediates -r0 $<
 	# makeindex ${MAKE_DIR}/$(notdir $(<:.tex=.idx))
 	# tectonic -o $(MAKE_DIR) --print $<
-	convert -density 300 ${MAKE_DIR}/$(notdir $@) -quality 90
+	convert -density 300 ${MAKE_DIR}/$(notdir $@) -quality 90 $(@:.pdf=.png)
 
 	cp ${MAKE_DIR}/$(notdir $@) .
 	cp ${MAKE_DIR}/$(wildcard *.png) .
