@@ -59,4 +59,5 @@ deploy:
     - CV_*_eng*.png
   on:
     tags: true
-  cleanup: false
+    all_branches: true
+  skip_cleanup: true
