@@ -14,10 +14,10 @@
   <a href="https://travis-ci.com/github/DavideFauri/resume">
     <img alt="TravisCI" src="https://travis-ci.com/DavideFauri/resume.svg?branch=master" />
   </a>
-  <a href="https://example.com">
+  <a href="https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng.pdf">
     <img alt="Résumé (English)" src="https://img.shields.io/badge/resume%20(ENG)-pdf-green.svg" />
   </a>
-  <a href="https://example.com">
+  <a href="https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_ita.pdf">
     <img alt="Résumé (Italiano)" src="https://img.shields.io/badge/resume%20(ITA)-pdf-green.svg" />
   </a>
 </div>
@@ -27,19 +27,19 @@
 
 ## Preview
 
-My résumé is available in two languages: [ENG](https://example.com), [ITA](https://example.com)
+My résumé is available in two languages: [[ENG]](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng.pdf), [[ITA]](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_ita.pdf)
 
-|                                  Page. 1                                  |                                  Page. 2                                  |
-|:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
-| [![Résumé](https://via.placeholder.com/630x840.png)](https://example.com) | [![Résumé](https://via.placeholder.com/630x840.png)](https://example.com) |
+|                                                                                            Page. 1                                                                                            |                                                                                            Page. 2                                                                                            |
+|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| [![Résumé](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng-0.png)](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng.pdf) | [![Résumé](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng-1.png)](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng.pdf) |
 
+## How to compile your own
 
-## How to Use
+### Automatic publishing through Travis CI
 
-### Automatic compilation and publishing through Travis CI
+I've set up a `.travis.yml` configuration file to automatically use `tectonic` and compile both version of my résumé whenever a commit is made.
 
-I've set up a `.travis.yml` configuration file to automatically compile both version of my résumé whenever a commit is made, and to publish them if the committed version has a tag.
-The published PDFs should be accessible from the shields at the top of this README.
+If the committed version is tagged, the PDF files are published and should be accessible by clicking on one of the links of this README.
 
 ### Local compilation
 
@@ -48,7 +48,7 @@ For *local* compilation, a full TeX distribution is assumed. There are many dist
 The usage is simple: at a command prompt, just run
 
 ```bash
-$ make {your-cv}.pdf
+make {your-cv}.pdf
 ```
 
 and it should produce the desired output.
@@ -56,7 +56,6 @@ and it should produce the desired output.
 In the Makefile, I invoke the `latexmk` command, which is obtainable via the TeX Live package manager (`sudo tlmgr install latexmk`).
 
 Other, more modern approaches could work better: if I had to start from scratch now, I would probably use [Tectonic](https://tectonic-typesetting.github.io).
-
 
 ## Credit
 
