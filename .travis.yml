@@ -56,7 +56,7 @@ deploy:
   file_glob: true
   file:
     - CV_*.pdf
-    - CV_*_eng*.png
+    # - CV_*_eng*.png
   on:
     tags: true
     all_branches: true

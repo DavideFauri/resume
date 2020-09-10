@@ -25,13 +25,13 @@
 <br />
 
 
-## Preview
+## Download
 
 My résumé is available in two languages: [[ENG]](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng.pdf), [[ITA]](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_ita.pdf)
 
-|                                                                                            Page. 1                                                                                            |                                                                                            Page. 2                                                                                            |
-|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [![Résumé](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng-0.png)](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng.pdf) | [![Résumé](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng-1.png)](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng.pdf) |
+<!-- | Page. 1 | Page. 2 | -->
+<!-- |:-------:|:-------:| -->
+<!-- | [![Résumé](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng-0.png)](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng.pdf) | [![Résumé](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng-1.png)](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng.pdf) | -->
 
 ## How to compile your own
 
