@@ -28,7 +28,7 @@ else # travis run
 	tectonic -o $(MAKE_DIR) --keep-intermediates -r0 $<
 	if [ -f ${MAKE_DIR}/$(notdir $(<:.tex=.bcf)) ]; then biber --input-directory ${MAKE_DIR} $(notdir $(<:.tex=)); fi
 	if [ -f ${MAKE_DIR}/$(notdir $(<:.tex=.idx)) ]; then tectonic -o $(MAKE_DIR) --keep-intermediates -r0 $<; makeindex ${MAKE_DIR}/$(notdir $(<:.tex=.idx)); fi
-	tectonic -o $(MAKE_DIR) --print $<
+	tectonic -o $(MAKE_DIR) --print --keep-intermediates -r0 $<
 	convert -density 300 ${MAKE_DIR}/$(notdir $@) -quality 90 $(@:.pdf=.png)
 
 endif

@@ -2,6 +2,7 @@ language: generic
 
 addons:
   apt:
+    update: false
     packages:
       # to read from PDFs
       - ghostscript
@@ -51,10 +52,11 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: RoJ10tNqYOk6K7yxiXT4nj8oDocr9fnsWi9cQzqe5/jkCXquR6eT92DXq4vLdmc7uHWOFjwP1iURDs61upqEdbmLki8XMiZ5rXAtxWBF04je+TDUS4eLnc8abf6E/jJj4HX9c84SqVFl9aePyPZinm8QDvxw722vYOqAyeNbsz8MZVVFQvUvzmWwYbD1/iNkZ5v7IrfKdHPFi5TTOARGI1DI/D63pa2TzPsoh2lCSqe+t8IIY2gx7QR4HCCdEeBBqaABwm66La+7PjLl2HNk8c+VSrgParOV67HVZDCYSqokSgykZTausem06+LkYP62JBOxldNYchTluj+1NEctn2Bktk7jfLocl6LfcD3MOqpYa5XPha3WmaLpVOx0G/8cQ+L7JBT7DlqEzuhjntXaJH7g2cB0IYAnP7ofVYHJeNgqlKqyerx7HkpJ2/6W6XJMGbfcbul1dG555jYCtn0nkowYnunzY7PrxCtqJReWIeQDTpKsiFCtoATjk0ylRC9J/cgK+jTka2kYuQhk/NSkmHpodIJh199df9MPsuo2ibjkKBjNtY7SRjpMqDe9HI2JTdfLFAZ6Yg/Lu1GJsrVtdogQLf6ov4JS902mFO0fQpPkK7o5EhE5ZWKhZ8wJP1OQNszPYQx/V/iEVNb3HSXDYDyA/PNMdZEkf+WhskWjFE0=
+    secure: AAmoHOP8ivKVhhYAhzMJk/ipvm+tzFmCu1T++oeLEHSkln2oY8cuVxeux+5r7bgwqRIuDvyUoyMg0pgQU41avP4sAzvdZ5P8l6U112iU6oe59LyUTm1DYjfmdD6aCKFc1B56s9TJS+R2aAG1yQNV8dWGCXtxdQwaD/SYpx8AI+y+uS/gP7qBwN2Nd3PYxvcRYLV3D9Xja5NSdak2m1kjaohfs4TzhOiqU+60yEVRmcGt+M+36Dy8LMJO0zoHCN6iVF0+Qn/eROQVNBap1hhADha59fS5CEaZDWZCn/S0IN0Lbm70KhxOcb7BE7T78bX48WiFpZ8ThE48ovy9JO9hgIYgmpTAyOQHhLdzqfV04+Iyy4pSYEXsYe1bwcnGGxNqRu76Jt8DWawh55s26S9zDXDsBG7Qjvjj4+E8kQq8Qkw4OIFa7MpshfLjxW9M7WV2l/LMwOamDBsjF7nhq9XnE297NdSXpH/lvFOASwC9Aa7OZGhwtHt1V+lo5U+8DIEDqjZZGtWtidIKfrLQRjl7QwQxIKnkPMYz7sOHREs3+BSGJWrjogvSfO3y67ZKUw1gU7nD36jDk3g8QSpgWv0MgTRH6GG+OcfG23L1g3PxJgWjkeWNMXpXxWQ7JXxH66M7FhQjbGD/12CiIeFALgDZ62ieClfFl7zfPjpKlxFtbvM=
   file_glob: true
   file:
     - CV_*.pdf
-    - CV_*.png
+    - CV_*_eng*.png
   on:
     tags: true
+  cleanup: false
