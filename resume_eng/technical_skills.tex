@@ -1,15 +1,22 @@
 \cvsection[4]{Technical Skills}
 
+\newcommand\D{\rule{0pt}{3.6ex}}
+\newcommand\T{\rule{0pt}{2.6ex}} % The row is at least this high
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % The row is at least this deep
+
 \begin{cvskills}
-    \cvskill{Programming}
-        {Python, R, Haskell, Javascript, Datalog, Matlab, git, regex, bash}
-    \cvskill{Data-}
+    \cvskill{\begin{tabular}{r}Data-\D\end{tabular}}
         {\begin{tabular}{llll}
-            {\bf - Science} & Jupyter, pandas, tidyverse & {\bf - Mining} &RapidMiner, bnlearn, arules \\
-            {\bf-viz} & matplotlib, Plotly, Bokeh    & {\bf-bases} & SQL, mongoDB
+            {\bf - Science} & Jupyter, pandas, tidyverse & {\bf - Mining} &RapidMiner, bnlearn, arules \T\\
+            {\bf-viz} & matplotlib, Plotly, Bokeh    & {\bf-bases} & SQL, mongoDB \B
         \end{tabular}}
+    \cvskill{Programming}
+        {Python, R, Javascript, Haskell, Datalog, Matlab, git, Docker, regex, bash.
+        \hspace*{0.7cm}%
+        \emph{\# I write clear, modular, well-commented code.}
+        }
     \cvskill{Security}
-        {Network monitoring (Wireshark/Zeek), virtualization (VM/Docker), malware analysis (IDA/Cutter/Ghidra), lockpicking}
+        {Network monitoring (Wireshark/Zeek), penetration testing (Metasploit/nmap/sqlmap), malware analysis (IDA/Cutter), lockpicking}
     \cvskill{Graphics}
         {\LaTeX, TiKz, Photoshop, video (Final Cut/DaVinci Resolve)}
     \cvskill{Languages}
