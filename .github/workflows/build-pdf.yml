@@ -1,0 +1,22 @@
+name: 'Tectonic + Biber'
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'LaTeX file to build'
+        required: true
+        default: 'main.tex'
+  
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    container: dxjoke/tectonic-docker
+    steps:
+    - run: |
+        tectonic --keep-intermediates --reruns 0 ${{ github.event.inputs.name }}
+        biber ${{ github.event.inputs.name }}
+        tectonic ${{ github.event.inputs.name }}
+  
+#  artifacts:
+#    paths:
+#      - main.pdf
