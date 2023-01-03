@@ -14,16 +14,16 @@
   <a href="https://travis-ci.com/github/DavideFauri/resume">
     <img alt="TravisCI" src="https://travis-ci.com/DavideFauri/resume.svg?branch=master" />
   </a><br/>
-  <a href="https://github.com/DavideFauri/resume/releases/download/Nov-2020-Security/CV_Davide_Fauri-eng.pdf">
+  <a href="https://github.com/DavideFauri/resume/releases/download/Latest-Security/CV_Davide_Fauri-eng.pdf">
     <img alt="Résumé - Security (English)" src="https://img.shields.io/badge/CV%20Security%20🇬🇧-pdf-green.svg" />
   </a>
-  <a href="https://github.com/DavideFauri/resume/releases/download/Nov-2020-Security/CV_Davide_Fauri-ita.pdf">
+  <a href="https://github.com/DavideFauri/resume/releases/download/Latest-Security/CV_Davide_Fauri-ita.pdf">
     <img alt="Résumé - Security (Italiano)" src="https://img.shields.io/badge/CV%20Security%20🇮🇹-pdf-green.svg" />
   </a><br/>
-  <a href="https://github.com/DavideFauri/resume/releases/download/Nov-2020-Data/CV_Davide_Fauri-eng.pdf">
+  <a href="https://github.com/DavideFauri/resume/releases/download/Latest-Data/CV_Davide_Fauri-eng.pdf">
     <img alt="Résumé - Data (English)" src="https://img.shields.io/badge/CV%20Data%20🇬🇧-pdf-green.svg" />
   </a>
-  <a href="https://github.com/DavideFauri/resume/releases/download/Nov-2020-Data/CV_Davide_Fauri-ita.pdf">
+  <a href="https://github.com/DavideFauri/resume/releases/download/Latest-Data/CV_Davide_Fauri-ita.pdf">
     <img alt="Résumé - Data (Italiano)" src="https://img.shields.io/badge/CV%20Data%20🇮🇹-pdf-green.svg" />
   </a>
 </div>
@@ -33,11 +33,12 @@
 
 ## Download
 
-My résumé is available for both cybersecurity ([ENG](https://github.com/DavideFauri/resume/releases/download/Nov-2020-Security/CV_Davide_Fauri-eng.pdf), [ITA](https://github.com/DavideFauri/resume/releases/download/Nov-2020-Security/CV_Davide_Fauri-ita.pdf)) and data/programming ([ENG](https://github.com/DavideFauri/resume/releases/download/Nov-2020-Data/CV_Davide_Fauri-eng.pdf), [ITA](https://github.com/DavideFauri/resume/releases/download/Nov-2020-Data/CV_Davide_Fauri-ita.pdf)) positions.
-
-<!-- | Page. 1 | Page. 2 | -->
-<!-- |:-------:|:-------:| -->
-<!-- | [![Résumé](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng-0.png)](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng.pdf) | [![Résumé](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng-1.png)](https://github.com/DavideFauri/resume/releases/download/latest/CV_Davide_Fauri_eng.pdf) | -->
+My résumé is available for both cybersecurity
+([ENG](https://github.com/DavideFauri/resume/releases/download/Latest-Security/CV_Davide_Fauri-eng.pdf),
+[ITA](https://github.com/DavideFauri/resume/releases/download/Latest-Security/CV_Davide_Fauri-ita.pdf))
+and data/programming
+([ENG](https://github.com/DavideFauri/resume/releases/download/Latest-Data/CV_Davide_Fauri-eng.pdf),
+[ITA](https://github.com/DavideFauri/resume/releases/download/Latest-Data/CV_Davide_Fauri-ita.pdf)) positions.
 
 ## How to compile your own
 
