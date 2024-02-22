@@ -12,7 +12,7 @@
 \newcommand{\skillsData}{
   \cvskill{%
     \begin{tabular}{r@{}}
-      Data\rule{0pt}{3.8ex}
+      Data\rule{0pt}{3ex}%\rule{0pt}{3.8ex}
     \end{tabular}%
   }{
     \hspace*{-1.6ex}
@@ -26,13 +26,8 @@
       \EN{\bf Analysis}
       \IT{\bf Analisi}
       &
-      \EN{Data cleaning, feature engineering, pandas, tidyverse, Excel, RapidMiner, SQL/NoSQL (postgreSQL/mongoDB)}
-      \IT{Pulizia dati, ingegneria delle feature, pandas, tidyverse, Excel, RapidMiner, SQL/NoSQL (postgreSQL/mongoDB)}
-      \\
-      \EN{\bf Visualization}
-      \IT{\bf Viz}
-      &
-      Jupyter notebooks, Plotly, Bokeh, matplotlib, ggplot%Tableau
+      \EN{Feature engineering, data quality, visualization, Jupyter notebooks, pandas, Excel, databases (postgreSQL/mongoDB)}
+      \IT{Ingegneria delle feature, data quality, visualizzazione, Jupyter notebooks, pandas, Excel, database (postgreSQL/mongoDB)}
       \B
     \end{tabular*}
   }
@@ -48,14 +43,14 @@
     \hspace*{-1.6ex}
     \begin{tabular*}{\textwidth * \real{0.9}}{l @{\extracolsep{\fill}} r}
       \T
-      Python, R, Haskell, Javascript, Datalog, Matlab, regex, bash, powershell, git
+      Python, R, Haskell, bash, powershell, git, regex, Javascript, Datalog, Matlab
       &
       \EN{\emph{\# I write clear, functional, test-driven code}}
       \IT{\emph{\# Scrivo codice chiaro, funzionale, test-driven}}
       \\
       \multicolumn{2}{l}{
-        \EN{Agile workflow (Scrum/Kanban/Jira), continuous integration (Jenkins/TravisCI), deployment (VMWare/Docker)}
-        \IT{Metodologia Agile (Scrum/Kanban/Jira), integrazione continua (Jenkins/TravisCI), rilascio (VMWare/Docker)}
+        \EN{Agile workflow (Scrum/Kanban/Jira), continuous integration (TravisCI), deployment (VM/Docker)}
+        \IT{Metodologia Agile (Scrum/Kanban/Jira), integrazione continua (TravisCI), rilascio (VM/Docker)}
       }
       \B
     \end{tabular*}
@@ -63,23 +58,42 @@
 }
 
 
+\newcommand{\skillsSysAdmin}{
+  \cvskill{%
+    SysAdmin%
+  }{
+    Active Directory, Microsoft Entra ID \& Conditional Access, Azure Global Admin, Exchange, Sharepoint, Teams
+  }
+}
+
 \newcommand{\skillsSecurity}{
   \cvskill{%
     \EN{Security}%
     \IT{Sicurezza}%
   }{
-    \EN{EDR (Sophos), network monitoring (Wireshark), pentesting (Kali/Metasploit/Burp), malware analysis, OWASP, cryptography}
-    \IT{EDR (Sophos), monitoraggio reti (Wireshark), pentesting (Kali/Metasploit/Burp), analisi di malware, OWASP, crittografia}
+    \EN{EDR (Sophos), SIEM (Sentinel), network monitoring (Wireshark), pentesting (Kali/Metasploit/Burp), malware analysis, OWASP, cryptography}
+    \IT{EDR (Sophos), SIEM (Sentinel), monitoraggio reti (Wireshark), pentesting (Kali/Metasploit/Burp), analisi di malware, OWASP, crittografia}
   }
 }
 
 
 \newcommand{\skillsBlueTeam}{
   \cvskill{%
-    {\color{awesome-skyblue}Blue} Team%
+    \begin{tabular}{r@{}}
+      {\color{awesome-skyblue}Blue} Team\rule{0pt}{3ex}
+    \end{tabular}%
   }{
-    \EN{EDR admin (Sophos), network monitoring (Wireshark), malware reversing (IDA/Cutter), cryptography}
-    \IT{Amministratore EDR (Sophos), monitoraggio reti (Wireshark), reversing di malware (IDA/Cutter), crittografia}
+    \hspace*{-1.6ex}
+    \begin{tabular*}{\textwidth * \real{0.9}}{l}
+      \T%
+      \EN{EDR+SIEM admin (Sophos, Sentinel), incident response, data protection (Purview), network monitoring (Wireshark),\\
+          malware reversing and static analysis (IDA, Cutter), cryptography
+      }
+      \IT{Amministratore EDR+SIEM (Sophos, Sentinel), risposta agli incidenti, data protection (Purview), monitoraggio reti (Wireshark),\\
+          reversing di malware e analisi statica (IDA, Cutter), crittografia
+      }
+      \B
+    \end{tabular*}
   }
 }
 
@@ -88,8 +102,8 @@
   \cvskill{%
     {\color{awesome}Red} Team%
   }{
-    \EN{Penetration testing (Kali/Metasploit/Burp/nmap/sqlmap), phishing campaigns, hobby lockpicking}
-    \IT{Penetration testing (Kali/Metasploit/Burp/nmap/sqlmap), campagne di phishing, lockpicking amatoriale}
+    \EN{BAS admin (Pentera), OSINT, phishing campaigns, manual penetration test (Kali/Metasploit/nmap/web/wifi), lockpicking}
+    \IT{Amministratore BAS (Pentera), OSINT, campagne di phishing, penetration testing (Kali/Metasploit/nmap/web/wifi), lockpicking}
   }
 }
 
@@ -98,7 +112,7 @@
   \cvskill{%
     Media%
   }{
-    \LaTeX{} + TiKz, Powerpoint, Photoshop, Audacity, Final Cut, DaVinci Resolve
+    Powerpoint, Photoshop, audio + video editing (Audacity, Final Cut, DaVinci Resolve), \LaTeX{} + TiKz
   }
 }
 
@@ -121,6 +135,8 @@
   \skillsBlueTeam
 
   \skillsRedTeam
+
+  \skillsSysAdmin
 
   \skillsDevOps
 
