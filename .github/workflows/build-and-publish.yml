@@ -1,0 +1,43 @@
+name: Build CV and Publish
+run-name: ${{ github.actor }} is publishing ${{ github.ref_type }} ${{ github.ref_name }}
+
+on:
+  push:
+    tags:
+      - Latest-*
+
+env:
+  FILENAME: CV_Davide_Fauri
+
+jobs:
+  create-CV:
+    runs-on: ubuntu-latest
+    container: dxjoke/tectonic-docker
+
+    strategy:
+      matrix:
+        lang:
+          - name: italian
+            shortname: ita
+          - name: english
+            shortname: eng
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+      - name: Change the language to ${{ matrix.lang.name }}
+        run: cat $FILENAME.tex | sed 's|^\\usepackage\[[a-z,=]*\]{babel}|\\usepackage\['"${{ matrix.lang.name }}"'\]{babel}|' > $FILENAME-${{ matrix.lang.shortname }}.tex
+      - name: Check that the file exists
+        run: ls -al *.tex
+      - name: Check that the file language has been correctly set up
+        run: cat $FILENAME-${{ matrix.lang.shortname }}.tex | grep babel
+        #- docker run --mount src=$TRAVIS_BUILD_DIR,dst=/usr/src/tex,type=bind dxjoke/tectonic-docker
+      - name: Compile LaTeX via tectonic
+        run: tectonic --keep-intermediates --reruns 0 $FILENAME-${{ matrix.lang.shortname }}.tex; biber $FILENAME-${{ matrix.lang.shortname }}; tectonic --reruns 1 $FILENAME-${{ matrix.lang.shortname }}.tex
+      - name: Release to Github
+        uses: softprops/action-gh-release@v2.0.4
+        with:
+          files:
+            ${{ env.FILENAME }}-${{ matrix.lang.shortname }}.pdf
+      - run: echo "Job status is ${{ job.status }}."
+
